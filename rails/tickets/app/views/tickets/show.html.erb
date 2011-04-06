@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>氏名:</b>
+  <%= @ticket.name %>
+</p>
+
+<p>
+  <b>ご希望のお席:</b>
+  <%= @ticket.seat_id_seq %>
+</p>
+
+<p>
+  <b>御住所:</b>
+  <%= @ticket.address %>
+</p>
+
+<p>
+  <b>料金:</b>
+  <%= @ticket.price_paid %>
+</p>
+
+<p>
+  <b>メールアドレス:</b>
+  <%= @ticket.email_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

@@ -1,0 +1,31 @@
+<h1>:::Tickets:::</h1>
+
+<table>
+  <tr>
+    <th>n a m e</th>
+    <th>s e a t</th>
+    <th>a d r s</th>
+    <th>p r i c</th>
+    <th>m a i l</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%= ticket.name %></td>
+    <td><%= ticket.seat_id_seq %></td>
+    <td><%= ticket.address %></td>
+    <td><%= ticket.price_paid %></td>
+    <td><%= ticket.email_address %></td>
+    <td><%= link_to 'Show', ticket %></td>
+    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ticket', new_ticket_path %>
